@@ -1,0 +1,1795 @@
+{
+  "intents": [
+    {
+      "intent": "Book_tickets",
+      "examples": [
+        {
+          "text": "I want to book a ticket"
+        },
+        {
+          "text": "i want to buy a ticket"
+        },
+        {
+          "text": "i want to have a ticket"
+        },
+        {
+          "text": "Space sweepers"
+        }
+      ],
+      "description": "booktickets"
+    },
+    {
+      "intent": "Greetings",
+      "examples": [
+        {
+          "text": "Good afternoon"
+        },
+        {
+          "text": "Goodbye"
+        },
+        {
+          "text": "Good evening"
+        },
+        {
+          "text": "Good morning"
+        },
+        {
+          "text": "Have a nice day"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hi"
+        }
+      ],
+      "description": "Greeting"
+    },
+    {
+      "intent": "Inquiry",
+      "examples": [
+        {
+          "text": "can we buy snacks from there"
+        },
+        {
+          "text": "how much is the ticket"
+        },
+        {
+          "text": "is there a place where we can buy snacks"
+        },
+        {
+          "text": "tickets availability"
+        },
+        {
+          "text": "what are the days of the projection of the movie"
+        },
+        {
+          "text": "what is the ticket price"
+        },
+        {
+          "text": "when is the projetion of the movie"
+        }
+      ],
+      "description": "inquiry"
+    },
+    {
+      "intent": "Movies_availability",
+      "examples": [
+        {
+          "text": "Can you give me the movies available?"
+        },
+        {
+          "text": "horror"
+        },
+        {
+          "text": "I want to know the movies available."
+        },
+        {
+          "text": "I want to know the movies available these days."
+        },
+        {
+          "text": "i want to know the movies list"
+        },
+        {
+          "text": "What are the available movies?"
+        },
+        {
+          "text": "What movies are available?"
+        }
+      ],
+      "description": "moviesavailability"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "availability",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "available today",
+          "synonyms": [
+            "available in the following days ",
+            "available next week",
+            "still available",
+            "when is it available"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "what movies are available?",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "booking_tickets",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "booking",
+          "synonyms": [
+            "book",
+            "book tickets ",
+            "buy",
+            "buying",
+            "purchase"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "days",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "friday",
+          "synonyms": [
+            "Friday"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "monday",
+          "synonyms": [
+            "Monday"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Saturday",
+          "synonyms": [
+            "saturday"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "sunday",
+          "synonyms": [
+            "Sunday"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "thursday",
+          "synonyms": [
+            "Thursday"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Tuesday",
+          "synonyms": [
+            "tuesday"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Wednesday",
+          "synonyms": [
+            "wednesday"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "email",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "email",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "greetings",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Good afternoon",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Goodbye",
+          "synonyms": [
+            "Bye "
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good evening",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Good morning",
+          "synonyms": [
+            "Morning"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good night",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Hi",
+          "synonyms": [
+            "Hello"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "thank you",
+          "synonyms": [
+            "thank u",
+            "thanx",
+            "thnk u",
+            "thnk you",
+            "thx"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "inquiry",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "price",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "snacks",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "ticketsavailability",
+          "synonyms": [
+            "Tickets availability"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "time",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "movietypes",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "action films",
+          "synonyms": [
+            "action movies",
+            "thriller movies"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "comic movies",
+          "synonyms": [
+            "comic films",
+            "funny films",
+            "funny movies"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "fantasy movies",
+          "synonyms": [
+            "science fiction movies"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "horror",
+          "synonyms": [
+            "horror films",
+            "horror movies"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "horror movies",
+          "synonyms": [
+            "frightening movies",
+            "horrifying movies",
+            "scary movies"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "kids films",
+          "synonyms": [
+            "animated films",
+            "cartoon movies ",
+            "disney films",
+            "pixar films"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "musicals",
+          "synonyms": [
+            "broadway shows ",
+            "opera"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "romantic films",
+          "synonyms": [
+            "love movies",
+            "romance movies",
+            "romantic movies"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "payment",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "card",
+          "synonyms": [
+            "Card"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "cash",
+          "synonyms": [
+            "Cash"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "E-dinar",
+          "synonyms": [
+            "e-dinar"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "price",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "how much",
+          "synonyms": [
+            "cost",
+            "price"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "snacks",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "snacks",
+          "synonyms": [
+            "appetizers",
+            "breads",
+            "cakes",
+            "candies",
+            "chocolates",
+            "cupcakes",
+            "doughnuts",
+            "drinks",
+            "hamburgers",
+            "milkshakes",
+            "pizzas",
+            "popcorn",
+            "pretzels",
+            "sandwiches",
+            "smoothies",
+            "sodas",
+            "sweets"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-time",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "time",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "am",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "pm",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "when",
+          "synonyms": [
+            "on what time"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Movies_availibility",
+      "output": {
+        "generic": [
+          {
+            "title": "Choose a movie type:",
+            "options": [
+              {
+                "label": "action films",
+                "value": {
+                  "input": {
+                    "text": "Black Widow"
+                  }
+                }
+              },
+              {
+                "label": "fantasy movies",
+                "value": {
+                  "input": {
+                    "text": "Space sweepers"
+                  }
+                }
+              },
+              {
+                "label": "horror movies",
+                "value": {
+                  "input": {
+                    "text": "The conjuring: the devil made me do it"
+                  }
+                }
+              },
+              {
+                "label": "kids movies",
+                "value": {
+                  "input": {
+                    "text": "Minions: the rise of Gru"
+                  }
+                }
+              },
+              {
+                "label": "musicals",
+                "value": {
+                  "input": {
+                    "text": "Magic goes wrong"
+                  }
+                }
+              },
+              {
+                "label": "romantic films",
+                "value": {
+                  "input": {
+                    "text": "The Kissing Booth "
+                  }
+                }
+              },
+              {
+                "label": "comic movies",
+                "value": {
+                  "input": {
+                    "text": "Coming to America"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "#Movies_availability || @availability || @moviename",
+      "dialog_node": "Anything else",
+      "previous_sibling": "Welcome",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1614547852724",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1614547852748",
+      "previous_sibling": "handler_1_1614547852748"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1614555343036",
+      "context": {
+        "email": "@email.literal"
+      },
+      "conditions": "@email.literal",
+      "event_name": "input",
+      "dialog_node": "handler_10_1614555343065"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Choose a date or put a day (ex:next monday)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_1_1614810641767",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1614810641770",
+      "previous_sibling": "handler_5_1614810641770"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1614810655918",
+      "context": {
+        "number": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_10_1614810655919"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "title": "On which time would you like to assist to the projection? Select a time please:",
+            "options": [
+              {
+                "label": "10 A.M",
+                "value": {
+                  "input": {
+                    "text": ""
+                  }
+                }
+              },
+              {
+                "label": "3 P.M",
+                "value": {
+                  "input": {
+                    "text": ""
+                  }
+                }
+              },
+              {
+                "label": "7 P.M",
+                "value": {
+                  "input": {
+                    "text": ""
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "slot_9_1614810663123",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1614810663124",
+      "previous_sibling": "handler_7_1614810663124"
+    },
+    {
+      "type": "event_handler",
+      "parent": "Welcome",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1614547852093"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_4_1614547852724",
+      "event_name": "input",
+      "dialog_node": "handler_1_1614547852748"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_3_1614555098312",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1614555342502",
+      "previous_sibling": "response_2_1614810864273"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1614990033460",
+      "context": {
+        "days": "@days"
+      },
+      "conditions": "@days",
+      "event_name": "input",
+      "dialog_node": "handler_1_1614990033464"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "title": "Availability",
+            "options": [
+              {
+                "label": "action films",
+                "value": {
+                  "input": {
+                    "text": "Black widow"
+                  }
+                }
+              },
+              {
+                "label": "fantasy movies",
+                "value": {
+                  "input": {
+                    "text": "Space sweepers"
+                  }
+                }
+              },
+              {
+                "label": "horror movies",
+                "value": {
+                  "input": {
+                    "text": "The conjuring: the devil made me do it"
+                  }
+                }
+              },
+              {
+                "label": "kids films",
+                "value": {
+                  "input": {
+                    "text": "Minions: the rise of Gru"
+                  }
+                }
+              },
+              {
+                "label": "musicals",
+                "value": {
+                  "input": {
+                    "text": "Magic goes wrong"
+                  }
+                }
+              },
+              {
+                "label": "romantic films",
+                "value": {
+                  "input": {
+                    "text": "The Kissing Booth 3"
+                  }
+                }
+              },
+              {
+                "label": "comic movies",
+                "value": {
+                  "input": {
+                    "text": "Coming 2 America"
+                  }
+                }
+              }
+            ],
+            "description": "What is the type of the movies that you want to learn about? We have Science-fiction, musicals, dramas, comedy, horror, action, romance and finally movies for kids.",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "Anything else",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1614548491910",
+      "previous_sibling": "node_9_1614808484184"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1614810618603",
+      "context": {
+        "movietypes": "@movietypes"
+      },
+      "conditions": "@movietypes",
+      "event_name": "input",
+      "dialog_node": "handler_2_1614810618605"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1614548492471",
+      "context": {
+        "movietype": "@movietypes"
+      },
+      "conditions": "@movietypes",
+      "event_name": "input",
+      "dialog_node": "handler_3_1614548492497"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Enter the number of tickets you want to book"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_2_1614810655918",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1614810655919",
+      "previous_sibling": "handler_10_1614810655919"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1614810641767",
+      "context": {
+        "date": "@sys-date"
+      },
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "dialog_node": "handler_5_1614810641770"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "What is the type of the movies that you want to learn about? We have Science-fiction, musicals, dramas, comedy, horror, action, romance and finally movies for kids."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_5_1614548492471",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1614548492497",
+      "previous_sibling": "handler_3_1614548492497"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1614810663123",
+      "context": {
+        "time": "@sys-time"
+      },
+      "conditions": "@sys-time",
+      "event_name": "input",
+      "dialog_node": "handler_7_1614810663124"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1614810673346",
+      "context": {
+        "payment": "@payment"
+      },
+      "conditions": "@payment",
+      "event_name": "input",
+      "dialog_node": "handler_7_1614810673347"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Please provide your email"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_8_1614555343036",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1614555343066",
+      "previous_sibling": "handler_10_1614555343065"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "title": "Please choose a movie",
+            "options": [
+              {
+                "label": "action films",
+                "value": {
+                  "input": {
+                    "text": "Black widow"
+                  }
+                }
+              },
+              {
+                "label": "fantasy films",
+                "value": {
+                  "input": {
+                    "text": "Space sweepers"
+                  }
+                }
+              },
+              {
+                "label": "horror movies",
+                "value": {
+                  "input": {
+                    "text": "The conjuring: the devil made me do it"
+                  }
+                }
+              },
+              {
+                "label": "kids movies",
+                "value": {
+                  "input": {
+                    "text": "Minions: the rise of Gru"
+                  }
+                }
+              },
+              {
+                "label": "musicals",
+                "value": {
+                  "input": {
+                    "text": "Magic goes wrong"
+                  }
+                }
+              },
+              {
+                "label": "romantic films",
+                "value": {
+                  "input": {
+                    "text": "The kissing booth "
+                  }
+                }
+              },
+              {
+                "label": "comedy films",
+                "value": {
+                  "input": {
+                    "text": "Coming to America"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "slot_6_1614810618603",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1614810618605",
+      "previous_sibling": "handler_2_1614810618605"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "How do you want to pay for your tickets? Please choose between cash, E-dinar and card."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_6_1614810673346",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1614810673347",
+      "previous_sibling": "handler_7_1614810673347"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1614990033460",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1614990033464",
+      "previous_sibling": "handler_1_1614990033464"
+    },
+    {
+      "type": "frame",
+      "title": "BookTickets",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you ! Your booking for $movietypes is scheduled on $date $days at $time for $number tickets is being placed. You have selected to pay using $payment. Your receipt and seating are being sent to your E-Mail $email. Have a good day!\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "#Book_tickets &&      @booking_tickets:(booking)",
+      "dialog_node": "node_3_1614555098312",
+      "previous_sibling": "node_5_1614555054606"
+    },
+    {
+      "type": "standard",
+      "title": "inquiry ",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Inquiry || @inquiry",
+      "dialog_node": "node_5_1614555054606",
+      "previous_sibling": "Anything else"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Welcome! I am the bot in charge to help you with some tasks:\n1.Movies available\n2.Different show timings\n3.Tickets availability\n4.The tickets prices\n5.Book tickets\n6.Snacks\nPlease choose an option.\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_8_1614802150606"
+    },
+    {
+      "type": "standard",
+      "title": "show_timing",
+      "parent": "Anything else",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@projection_rooms",
+      "dialog_node": "node_9_1614808484184",
+      "previous_sibling": "response_10_1614893624527"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good night!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "conditions": "@greetings:(Good night)",
+      "dialog_node": "response_10_1614548239004",
+      "previous_sibling": "response_6_1614548219522"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Tickets are still available. You can book now!  "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1614555054606",
+      "conditions": "@inquiry:ticketsavailability",
+      "dialog_node": "response_10_1614893252167",
+      "previous_sibling": "response_8_1614811730012"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Availability",
+            "options": [
+              {
+                "label": "action films",
+                "value": {
+                  "input": {
+                    "text": "Black Widow"
+                  }
+                }
+              },
+              {
+                "label": "",
+                "value": {
+                  "input": {
+                    "text": ""
+                  }
+                }
+              },
+              {
+                "label": "",
+                "value": {
+                  "input": {
+                    "text": ""
+                  }
+                }
+              },
+              {
+                "label": "",
+                "value": {
+                  "input": {
+                    "text": ""
+                  }
+                }
+              },
+              {
+                "label": "",
+                "value": {
+                  "input": {
+                    "text": ""
+                  }
+                }
+              }
+            ],
+            "description": "What is the type of the movies that you want to learn about? We have Science-fiction, musicals, dramas, comedy, horror, action, romance and finally movies for kids.",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "Anything else",
+      "disabled": true,
+      "dialog_node": "response_10_1614893624527"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Projection_time",
+            "options": [
+              {
+                "label": "Morning projection (10 A.M)",
+                "value": {
+                  "input": {
+                    "text": "first projection"
+                  }
+                }
+              },
+              {
+                "label": "Afternoon Projection (3 P.M)",
+                "value": {
+                  "input": {
+                    "text": "second projection"
+                  }
+                }
+              },
+              {
+                "label": "Night Projection (7 P.M)",
+                "value": {
+                  "input": {
+                    "text": "third projection"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          },
+          {
+            "title": "Please select:",
+            "options": [
+              {
+                "label": "Book tickets",
+                "value": {
+                  "input": {
+                    "text": "Book tickets"
+                  }
+                }
+              },
+              {
+                "label": "Pojection prices",
+                "value": {
+                  "input": {
+                    "text": "Pojection prices"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_9_1614808484184",
+      "conditions": "@projection_rooms:room_5",
+      "dialog_node": "response_2_1614809131073",
+      "previous_sibling": "response_4_1614809122390"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1614555098312",
+      "disabled": true,
+      "dialog_node": "response_2_1614810864273"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "The cinema has a shop in which you can find snacks for every taste. You can check the different snacks available directly in the shop."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1614555054606",
+      "conditions": "@inquiry:snacks",
+      "dialog_node": "response_2_1614811582091"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "The ticket is 3$ for kids and 5$ for adults."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1614555054606",
+      "conditions": "@inquiry:price",
+      "dialog_node": "response_2_1614811728498",
+      "previous_sibling": "response_2_1614811582091"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good evening. How can I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "conditions": "@greetings:(Good evening)",
+      "dialog_node": "response_3_1614548150842",
+      "previous_sibling": "response_7_1614548114543"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Projection_time",
+            "options": [
+              {
+                "label": "Morning Projection (10 A.M)",
+                "value": {
+                  "input": {
+                    "text": "first projection"
+                  }
+                }
+              },
+              {
+                "label": "Afternoon Projection (3 P.M)",
+                "value": {
+                  "input": {
+                    "text": "second projection"
+                  }
+                }
+              },
+              {
+                "label": "Night Projection (7 P.M)",
+                "value": {
+                  "input": {
+                    "text": "third projection"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          },
+          {
+            "title": "Please select:",
+            "options": [
+              {
+                "label": "Book tickets",
+                "value": {
+                  "input": {
+                    "text": "Book tickets"
+                  }
+                }
+              },
+              {
+                "label": "Projection prices",
+                "value": {
+                  "input": {
+                    "text": "Projection prices"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_9_1614808484184",
+      "conditions": "@projection_rooms:room_2",
+      "dialog_node": "response_3_1614809105346",
+      "previous_sibling": "response_6_1614808911500"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Projection_time",
+            "options": [
+              {
+                "label": "Morning projection (10 A.M)",
+                "value": {
+                  "input": {
+                    "text": "first projection"
+                  }
+                }
+              },
+              {
+                "label": "Afternoon Projection (3 P.M)",
+                "value": {
+                  "input": {
+                    "text": "second projection"
+                  }
+                }
+              },
+              {
+                "label": "Night Projection (7 P.M)",
+                "value": {
+                  "input": {
+                    "text": "third projection"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          },
+          {
+            "title": "Please select:",
+            "options": [
+              {
+                "label": "Book tickets",
+                "value": {
+                  "input": {
+                    "text": "Book tickets"
+                  }
+                }
+              },
+              {
+                "label": "Pojection prices",
+                "value": {
+                  "input": {
+                    "text": "Pojection prices"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_9_1614808484184",
+      "conditions": "@projection_rooms:room_3",
+      "dialog_node": "response_3_1614809113068",
+      "previous_sibling": "response_3_1614809105346"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Projection_time",
+            "options": [
+              {
+                "label": "Morning projection (10 A.M)",
+                "value": {
+                  "input": {
+                    "text": "first projection"
+                  }
+                }
+              },
+              {
+                "label": "Afternoon Projection (3 P.M)",
+                "value": {
+                  "input": {
+                    "text": "second projection"
+                  }
+                }
+              },
+              {
+                "label": "Night Projection (7 P.M)",
+                "value": {
+                  "input": {
+                    "text": "third projection"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          },
+          {
+            "title": "Please select:",
+            "options": [
+              {
+                "label": "Book tickets",
+                "value": {
+                  "input": {
+                    "text": "Book tickets"
+                  }
+                }
+              },
+              {
+                "label": "Pojection prices",
+                "value": {
+                  "input": {
+                    "text": "Pojection prices"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_9_1614808484184",
+      "conditions": "@projection_rooms:room_4",
+      "dialog_node": "response_4_1614809122390",
+      "previous_sibling": "response_3_1614809113068"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Projection_time",
+            "options": [
+              {
+                "label": "Morning projection (10 A.M)",
+                "value": {
+                  "input": {
+                    "text": "first projection"
+                  }
+                }
+              },
+              {
+                "label": "Afternoon Projection (3 P.M)",
+                "value": {
+                  "input": {
+                    "text": "second projection"
+                  }
+                }
+              },
+              {
+                "label": "Night Projection (7 P.M)",
+                "value": {
+                  "input": {
+                    "text": "third projection"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          },
+          {
+            "title": "Please select:",
+            "options": [
+              {
+                "label": "Book tickets",
+                "value": {
+                  "input": {
+                    "text": "Book tickets"
+                  }
+                }
+              },
+              {
+                "label": "Pojection prices",
+                "value": {
+                  "input": {
+                    "text": "Pojection prices"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_9_1614808484184",
+      "conditions": "@projection_rooms:room_6",
+      "dialog_node": "response_4_1614809147180",
+      "previous_sibling": "response_2_1614809131073"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. How can I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "conditions": "@greetings:Hi",
+      "dialog_node": "response_5_1614548175966",
+      "previous_sibling": "response_3_1614548150842"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Goodbye!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "conditions": "@greetings:Goodbye",
+      "dialog_node": "response_6_1614548219522",
+      "previous_sibling": "response_5_1614548175966"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Projection_time",
+            "options": [
+              {
+                "label": "Morning projection (10 A.M)",
+                "value": {
+                  "input": {
+                    "text": "first projection"
+                  }
+                }
+              },
+              {
+                "label": "Afternoon projection ( 3 P.M)",
+                "value": {
+                  "input": {
+                    "text": "second projection"
+                  }
+                }
+              },
+              {
+                "label": "Night projection (7 P.M)",
+                "value": {
+                  "input": {
+                    "text": "third projection"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          },
+          {
+            "title": "Please select:",
+            "options": [
+              {
+                "label": "Book tickets",
+                "value": {
+                  "input": {
+                    "text": "Book tickets"
+                  }
+                }
+              },
+              {
+                "label": "Projection prices",
+                "value": {
+                  "input": {
+                    "text": "Projection prices"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_9_1614808484184",
+      "conditions": "@projection_rooms:room_1",
+      "dialog_node": "response_6_1614808911500"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good afternoon. How can I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "conditions": "@greetings:(Good afternoon)",
+      "dialog_node": "response_7_1614548114543",
+      "previous_sibling": "response_8_1614547851420"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Your welcome!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "conditions": "@greetings:(thank you)",
+      "dialog_node": "response_7_1614994732617",
+      "previous_sibling": "response_10_1614548239004"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good morning.How can I help you?od morning"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "conditions": "@greetings:(Good morning)",
+      "dialog_node": "response_8_1614547851420",
+      "previous_sibling": "slot_4_1614547852724"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "There are 3 projections: one in the morning at 10 A.M, another one in the afternoon at 3P.M and the last one at night at 7 P.M."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1614555054606",
+      "conditions": "@inquiry:time",
+      "dialog_node": "response_8_1614811730012",
+      "previous_sibling": "response_2_1614811728498"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_3_1614555098312",
+      "variable": "$date",
+      "dialog_node": "slot_1_1614810641767",
+      "previous_sibling": "slot_6_1614810618603"
+    },
+    {
+      "type": "slot",
+      "parent": "node_3_1614555098312",
+      "variable": "$number",
+      "dialog_node": "slot_2_1614810655918",
+      "previous_sibling": "slot_8_1614990033460"
+    },
+    {
+      "type": "slot",
+      "parent": "Welcome",
+      "dialog_node": "slot_4_1614547852724",
+      "previous_sibling": "handler_1_1614547852093"
+    },
+    {
+      "type": "slot",
+      "parent": "Anything else",
+      "variable": "$movietype",
+      "dialog_node": "slot_5_1614548492471",
+      "previous_sibling": "handler_2_1614548491910"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_3_1614555098312",
+      "variable": "$movietypes",
+      "dialog_node": "slot_6_1614810618603",
+      "previous_sibling": "slot_8_1614555343036"
+    },
+    {
+      "type": "slot",
+      "parent": "node_3_1614555098312",
+      "variable": "$payment",
+      "dialog_node": "slot_6_1614810673346",
+      "previous_sibling": "slot_9_1614810663123"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_3_1614555098312",
+      "variable": "$email",
+      "dialog_node": "slot_8_1614555343036",
+      "previous_sibling": "handler_1_1614555342502"
+    },
+    {
+      "type": "slot",
+      "parent": "node_3_1614555098312",
+      "variable": "$days",
+      "dialog_node": "slot_8_1614990033460",
+      "previous_sibling": "slot_1_1614810641767"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_3_1614555098312",
+      "variable": "$time",
+      "dialog_node": "slot_9_1614810663123",
+      "previous_sibling": "slot_2_1614810655918"
+    },
+    {
+      "type": "standard",
+      "title": "Greetings",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@greetings || #Greetings",
+      "dialog_node": "Welcome",
+      "previous_sibling": "node_8_1614802150606"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "intent_classification": {
+      "training_backend_version": "v2"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "My first skill",
+  "language": "en",
+  "description": ""
+}
